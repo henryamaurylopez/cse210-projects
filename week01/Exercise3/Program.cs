@@ -12,17 +12,25 @@ class Program
         string guess = Console.ReadLine();
         int guessInt = int.Parse(guess);
 
-        if (guessInt > magicNumberInt)
+        while (guessInt != magicNumberInt)
         {
-            Console.WriteLine("Enter a lower guess.");
-        }
-        else if (guessInt < magicNumberInt)
-        {
-            Console.WriteLine("Enter a higher guess.");
-        }
-        else
-        {
-            Console.WriteLine("Congratulations! You guessed it.");
+            if (guessInt > magicNumberInt)
+            {
+                Console.WriteLine("Enter a lower guess.");
+            }
+            else if (guessInt < magicNumberInt)
+            {
+                Console.WriteLine("Enter a higher guess.");
+            }
+            else
+            {
+                Console.WriteLine("Congratulations! You guessed it.");
+                break;
+            }
+
+            Console.Write("What is your guess? ");
+            guess = Console.ReadLine();
+            guessInt = int.Parse(guess);
         }
     }
 }
