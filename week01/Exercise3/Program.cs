@@ -4,9 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("What is the magic number? ");
-        string magicNumber = Console.ReadLine();
-        int magicNumberInt = int.Parse(magicNumber);
+        Random randomGenerator = new Random();
+        int magicNumberInt = randomGenerator.Next(1, 101);
+
+        Console.WriteLine("Welcome to the Number Guessing Game! Try to guess the random number.");
 
         Console.Write("What is your guess? ");
         string guess = Console.ReadLine();
@@ -16,21 +17,18 @@ class Program
         {
             if (guessInt > magicNumberInt)
             {
-                Console.WriteLine("Enter a lower guess.");
+                Console.WriteLine("Enter a lower number.");
             }
             else if (guessInt < magicNumberInt)
             {
-                Console.WriteLine("Enter a higher guess.");
-            }
-            else
-            {
-                Console.WriteLine("Congratulations! You guessed it.");
-                break;
+                Console.WriteLine("Enter a higher number.");
             }
 
             Console.Write("What is your guess? ");
             guess = Console.ReadLine();
             guessInt = int.Parse(guess);
         }
+
+        Console.WriteLine("Congratulations! You guessed it.");
     }
 }
