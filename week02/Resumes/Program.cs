@@ -19,5 +19,12 @@ class Program
         job2._endYear = 2025;
 
         job2.Display();
+
+        Resume resume = new Resume();
+
+        resume._jobs.Add(job1);
+        resume._jobs.Add(job2);
+
+        Console.WriteLine(resume._jobs[0]._jobTitle);
     }
 }
