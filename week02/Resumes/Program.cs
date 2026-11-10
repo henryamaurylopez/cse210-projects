@@ -14,9 +14,10 @@ class Program
 
         Job job2 = new Job();
         job2._company = "Innovatech";
+        job2._jobTitle = "Senior Developer";
+        job2._startYear = 2023;
+        job2._endYear = 2025;
 
-        Console.WriteLine("");
-        Console.WriteLine(job1._company);
-        Console.WriteLine(job2._company);
+        job2.Display();
     }
 }
