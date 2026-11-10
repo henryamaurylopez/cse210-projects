@@ -9,7 +9,7 @@ class Program
         int totalItems = 0;
 
         Console.WriteLine("Create a list of numbers. Type '0' when finished.");
-        Console.Write("Enter another number:");
+        Console.Write("Enter another number: ");
         string input = Console.ReadLine();
 
         while (input != "0")
@@ -18,7 +18,7 @@ class Program
             numbers.Add(number);
             totalAmount += number;
             totalItems++;
-            Console.Write("Enter another number:");
+            Console.Write("Enter another number: ");
             input = Console.ReadLine();
         }
 
