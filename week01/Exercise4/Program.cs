@@ -34,7 +34,7 @@ class Program
         Console.WriteLine($"The total number of items is: {totalItems}");
 
         float average = (float)totalAmount / totalItems;
-        Console.WriteLine($"The average is: {average}");
+        Console.WriteLine($"The average is: {average:F2}");
 
         int largestNumber = numbers.Max();
         Console.WriteLine($"The largest number is: {largestNumber}");
