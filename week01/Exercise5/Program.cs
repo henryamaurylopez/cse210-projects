@@ -14,6 +14,7 @@ class Program
         Console.WriteLine("");
         DisplayResult(userName, squaredNumber);
     }
+    
     static void DisplayWelcome()
     {
         Console.WriteLine("Welcome to the Program!");
