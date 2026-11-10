@@ -5,9 +5,13 @@ class Program
     static void Main(string[] args)
     {
         DisplayWelcome();
+        Console.WriteLine("");
+
         string userName = PromptUserName();
         int favoriteNumber = PromptUserNumber();
         int squaredNumber = SquareNumber(favoriteNumber);
+
+        Console.WriteLine("");
         DisplayResult(userName, squaredNumber);
 
         static void DisplayWelcome()
