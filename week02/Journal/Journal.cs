@@ -44,6 +44,10 @@ public class Journal
 
             Console.WriteLine($"Journal saved to '{file}'.");
         }
+        else
+        {
+            Console.WriteLine("That file does not exists. Please enter another filename.");
+        }
     }
 
     public void LoadFromFile(string file)
