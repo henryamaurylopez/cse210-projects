@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Boolean Quit = false;
+        Journal journal = new Journal();
 
         Console.WriteLine("We hope you have had a great day!");
 
@@ -24,7 +25,6 @@ class Program
             if (choice == "1")
             {
                 // Write
-                Journal journal = new Journal();
                 Entry entry = new Entry();
                 journal.AddEntry(entry);
                 Console.WriteLine("");
@@ -32,22 +32,19 @@ class Program
             else if (choice == "2")
             {
                 // Display
-                Journal displayJournal = new Journal();
-                displayJournal.DisplayAll();
+                journal.DisplayAll();
                 Console.WriteLine("");
             }
             else if (choice == "3")
             {
                 // Load
-                Journal loadJournal = new Journal();
-                loadJournal.LoadFromFile("");
+                journal.LoadFromFile("");
                 Console.WriteLine("");
             }
             else if (choice == "4")
             {
                 // Save
-                Journal saveJournal = new Journal();
-                saveJournal.SaveToFile("");
+                journal.SaveToFile("");
                 Console.WriteLine("");
             }
             else if (choice == "5")
@@ -60,4 +57,6 @@ class Program
                 Console.WriteLine("Invalid choice. Please try again.");
                 Console.WriteLine("");
             }
-    
+        }
+    }
+}
