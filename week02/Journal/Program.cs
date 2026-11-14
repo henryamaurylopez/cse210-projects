@@ -68,6 +68,7 @@ class Program
 
                     if (promptChoice == "1")
                     {
+                        promptGenerator.FillList(); // Ensure the list is filled before displaying
                         promptGenerator.DisplayPrompts();
                         Console.WriteLine("");
                     }
