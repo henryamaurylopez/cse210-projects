@@ -17,7 +17,9 @@ class Program
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
-            Console.WriteLine("5. Quit");
+            Console.WriteLine("5. Edit Prompts");
+            Console.WriteLine("6. Quick Tips");
+            Console.WriteLine("7. Quit");
 
             Console.Write("What would you like to do? ");
             string choice = Console.ReadLine();
@@ -50,6 +52,69 @@ class Program
                 Console.WriteLine("");
             }
             else if (choice == "5")
+            {
+                Boolean goBack = false;
+                while (!goBack)
+                {
+                    // Edit Prompts
+                    Console.WriteLine("Prompt Management:");
+                    Console.WriteLine("1. Display Prompts");
+                    Console.WriteLine("2. Add Prompt");
+                    Console.WriteLine("3. Remove Prompt");
+                    Console.WriteLine("4. Go Back");
+                    Console.Write("What would you like to do? ");
+                    string promptChoice = Console.ReadLine();
+                    Console.WriteLine("");
+
+                    if (promptChoice == "1")
+                    {
+                        promptGenerator.DisplayPrompts();
+                        Console.WriteLine("");
+                    }
+                    else if (promptChoice == "2")
+                    {
+                        Console.Write("Enter the new prompt: ");
+                        string newPrompt = Console.ReadLine();
+                        promptGenerator.AddPrompt(newPrompt);
+                        promptGenerator.FillList(); // Refresh the list after adding a new prompt
+                        Console.WriteLine("Prompt added successfully.");
+                        Console.WriteLine("");
+                    }
+                    else if (promptChoice == "3")
+                    {
+                        promptGenerator.DisplayPrompts();
+                        Console.Write("Enter the index of the prompt to remove: ");
+                        string indexEntry = Console.ReadLine();
+                        int indexToRemove = int.Parse(indexEntry);
+
+                        promptGenerator.RemovePrompt(indexToRemove - 1); // Adjust for zero-based index
+                        promptGenerator.FillList(); // Refresh the list after removing a prompt
+                        Console.WriteLine("Prompt removed successfully.");
+                        Console.WriteLine("");
+                    }
+                    else if (promptChoice == "4")
+                    {
+                        goBack = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid choice. Please try again.");
+                        Console.WriteLine("");
+                    }
+                }
+            }
+            else if (choice == "6")
+            {
+                // Quick Tips
+                Console.WriteLine("Quick Tips:");
+                Console.WriteLine("- Make sure to load your journal before making changes. Failure to do so may result in data loss.");
+                Console.WriteLine("- Write regularly to improve your writing skills.");
+                Console.WriteLine("- Be honest and reflective in your entries.");
+                Console.WriteLine("- Use prompts to inspire creativity and self-expression.");
+                Console.WriteLine("- Review past entries to track personal growth and insights.");
+                Console.WriteLine("");
+            }
+            else if (choice == "7")
             {
                 // Quit
                 Quit = true;
