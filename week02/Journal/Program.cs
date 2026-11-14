@@ -85,6 +85,7 @@ class Program
                     {
                         promptGenerator.FillList(); // Ensure the list is filled before displaying
                         promptGenerator.DisplayPrompts();
+                        promptGenerator.FillList(); // Refresh the list after displaying to ensure it's up-to-date
                         Console.Write("Enter the index of the prompt to remove: ");
                         string indexEntry = Console.ReadLine();
                         int indexToRemove = int.Parse(indexEntry);
