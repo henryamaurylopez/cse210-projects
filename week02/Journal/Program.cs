@@ -29,6 +29,7 @@ class Program
             {
                 // Write
                 Entry entry = new Entry();
+                promptGenerator.FillList(); // Ensure the list is filled before getting a random prompt
                 entry._promptText = promptGenerator.GetRandomPrompt();
                 journal.AddEntry(entry);
                 Console.WriteLine("");
