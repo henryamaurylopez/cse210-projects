@@ -34,11 +34,14 @@ public class PromptGenerator
     public void DisplayPrompts()
     {
         Console.WriteLine("Prompts:");
+
         foreach (string prompt in _prompts)
         {
             int count = _prompts.IndexOf(prompt) + 1;
             Console.WriteLine($"{count}. {prompt}");
         }
+
+        _prompts.Clear(); // Clear the list after displaying to avoid duplicates on subsequent displays
     }
 
     public void RemovePrompt(int index)
