@@ -12,4 +12,9 @@ public class Entry
         Console.WriteLine($"Prompt: {_promptText}");
         Console.WriteLine($"Entry: {_entryText}");
     }
+
+    public override string ToString()
+    {
+        return $"{_date}|{_promptText}|{_entryText}";
+    }
 }
