@@ -56,6 +56,7 @@ public class PromptGenerator
                     writer.WriteLine(prompt);
                 }
             }
+            Console.WriteLine("Prompt removed successfully.");
         }
         else
         {

@@ -91,7 +91,6 @@ class Program
 
                         promptGenerator.RemovePrompt(indexToRemove - 1); // Adjust for zero-based index
                         promptGenerator.FillList(); // Refresh the list after removing a prompt
-                        Console.WriteLine("Prompt removed successfully.");
                         Console.WriteLine("");
                     }
                     else if (promptChoice == "4")
