@@ -19,6 +19,7 @@ class Program
 
             Console.Write("What would you like to do? ");
             string choice = Console.ReadLine();
+            Console.WriteLine("");
 
             if (choice == "1")
             {
@@ -59,6 +60,4 @@ class Program
                 Console.WriteLine("Invalid choice. Please try again.");
                 Console.WriteLine("");
             }
-        }
-    }
-}
+    
