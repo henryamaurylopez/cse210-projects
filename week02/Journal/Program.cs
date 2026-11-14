@@ -1,3 +1,8 @@
+/// <summary>I added an additional feature to the journal application that allows 
+/// users to manage their writing prompts. This feature includes the ability to 
+/// display existing prompts, add new prompts, and remove unwanted prompts from 
+/// the prompts.txt file.</summary>
+
 // Purpose: Runs the journal menu and coordinates journal and prompt actions.
 using System; // Provides console input and output.
 
