@@ -33,7 +33,12 @@ public class Journal
         Console.Write("Enter the filename to save the journal: ");
         file = Console.ReadLine();
 
-        File.WriteAllLines(file, _entries.Select(entry => entry.ToString()));
+        if (File.Exists(file))
+        {
+            File.WriteAllLines(file, _entries.Select(entry => entry.ToString()));
+
+            Console.WriteLine($"Journal saved to '{file}'.");
+        }
     }
 
     public void LoadFromFile(string file)

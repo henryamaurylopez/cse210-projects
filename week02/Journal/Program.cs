@@ -6,6 +6,7 @@ class Program
     {
         Boolean Quit = false;
         Journal journal = new Journal();
+        PromptGenerator promptGenerator = new PromptGenerator();
 
         Console.WriteLine("We hope you have had a great day!");
 
@@ -26,6 +27,7 @@ class Program
             {
                 // Write
                 Entry entry = new Entry();
+                entry._promptText = promptGenerator.GetRandomPrompt();
                 journal.AddEntry(entry);
                 Console.WriteLine("");
             }
