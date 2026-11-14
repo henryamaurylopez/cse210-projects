@@ -83,6 +83,7 @@ class Program
                     }
                     else if (promptChoice == "3")
                     {
+                        promptGenerator.FillList(); // Ensure the list is filled before displaying
                         promptGenerator.DisplayPrompts();
                         Console.Write("Enter the index of the prompt to remove: ");
                         string indexEntry = Console.ReadLine();
