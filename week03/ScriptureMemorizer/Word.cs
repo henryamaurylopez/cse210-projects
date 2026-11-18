@@ -12,5 +12,29 @@ public class Word
     }
 
     public void Hide()
-    {}
+    {
+        string hiddenWord = "";
+
+        Console.Clear();
+        foreach (char letter in _text)
+        {
+            hiddenWord += "_";
+        }
+        _text = hiddenWord;
+    }
+
+    public void Show()
+    {
+        Console.Write(_text);
+    }
+
+    public bool IsHidden()
+    {
+        return _isHidden = true;
+    }
+
+    public string GetDisplayText()
+    {
+        return _text;
+    }
 }
