@@ -26,8 +26,8 @@ public class Reference
 
     public string GetDisplayText()
     {
-        string withEndVerse = $"'{_book} {_chapter}: {_verse}-{_endVerse}'";
-        string noEndVerse = $"'{_book} {_chapter}: {_verse}'";
+        string withEndVerse = $"'{_book} {_chapter}:{_verse}-{_endVerse}' ";
+        string noEndVerse = $"'{_book} {_chapter}:{_verse}' ";
 
         if (_endVerse == 0)
         {

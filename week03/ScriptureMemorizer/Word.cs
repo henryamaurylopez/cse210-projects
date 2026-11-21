@@ -21,6 +21,7 @@ public class Word
             hiddenWord += "_";
         }
         _text = hiddenWord;
+        _isHidden = true;
     }
 
     public void Show()
