@@ -24,6 +24,7 @@ public class Scripture
         {
             int index = random.Next(_words.Count());
             _words[index].Hide();
+            _words[index].IsHidden();
         }
     }
 

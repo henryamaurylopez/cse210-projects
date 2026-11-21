@@ -15,13 +15,11 @@ public class Word
     {
         string hiddenWord = "";
 
-        Console.Clear();
         foreach (char letter in _text)
         {
             hiddenWord += "_";
         }
         _text = hiddenWord;
-        _isHidden = true;
     }
 
     public void Show()
@@ -31,7 +29,9 @@ public class Word
 
     public bool IsHidden()
     {
-        return _isHidden = true;
+        _isHidden = true;
+
+        return _isHidden;
     }
 
     public string GetDisplayText()
