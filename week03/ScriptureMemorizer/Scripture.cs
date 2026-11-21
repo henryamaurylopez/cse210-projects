@@ -7,7 +7,7 @@ public class Scripture
 
     public Scripture(Reference reference, string text)
     {
-        string[] words = text.Split("", StringSplitOptions.RemoveEmptyEntries);
+        string[] words = text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
         _reference = reference;
         foreach (string word in words)
@@ -24,17 +24,16 @@ public class Scripture
         {
             int index = random.Next(_words.Count());
             _words[index].Hide();
-            _words[index].IsHidden();
         }
     }
 
     public string GetDisplayText()
     {
-        string displayText = _reference.GetDisplayText() + "";
+        string displayText = _reference.GetDisplayText() + " ";
 
         foreach (Word word in _words)
         {
-            displayText += word.GetDisplayText() + "";
+            displayText += word.GetDisplayText() + " ";
         }
 
         return displayText;

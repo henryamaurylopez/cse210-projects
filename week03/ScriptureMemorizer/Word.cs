@@ -20,6 +20,7 @@ public class Word
             hiddenWord += "_";
         }
         _text = hiddenWord;
+        _isHidden = true;
     }
 
     public void Show()
@@ -29,8 +30,6 @@ public class Word
 
     public bool IsHidden()
     {
-        _isHidden = true;
-
         return _isHidden;
     }
 
